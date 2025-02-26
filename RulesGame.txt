@@ -9,7 +9,7 @@ Protocol organization (PC ↔ STM)
 2.2. STM32 – The STM32 handles the game logic, processes movement, and sends the game state to the PC.
 2.3. Communication – UART is used for communication.
 Error Handling
-</3. Error Processing/>
+**3. Error Processing**
 Error handling will be performed using CRC16. (0x01 – Unknown command)
 4.Game Process Recovery
 4.1. Sending an Error Code with Recovery
