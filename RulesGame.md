@@ -1,4 +1,4 @@
-Game Rules “GameSnake”
+# Game Rules “GameSnake”
 1.1. Game Field – The game field is a grid (e.g., NxN).
 1.2. Game Start – The game starts from a specific starting position, presumably         in the center, and movement is controlled using the WASD keys.
 1.3. Snake Growth – The snake grows in size each time it eats an apple.
