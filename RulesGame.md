@@ -29,9 +29,9 @@ Send a request for retransmission (0x20).
  7.1. Handling Delays
 <br>If commands are received with a very small interval, we implement a mechanism where, if no information is received for 1 second, the game will pause.
 ### 8. STM32 Behavior in Case of an Erroneous Game Stop
-<br>1)If STM32 unexpectedly receives a game termination command (specific commands to be defined later):
-<br>2)It must check the last game state (e.g., verify if there is a repeated command).
-<br>3)If the command was received by mistake, STM32 sends a confirmation request to the PC.
-<br>4)If the PC does not confirm within 1 second, the game continues.
-<br>5)If the PC resends the termination command, STM32 ends the game.
+<br>1) If STM32 unexpectedly receives a game termination command (specific commands to be defined later):
+<br>2) It must check the last game state (e.g., verify if there is a repeated command).
+<br>3) If the command was received by mistake, STM32 sends a confirmation request to the PC.
+<br>4) If the PC does not confirm within 1 second, the game continues.
+<br>5) If the PC resends the termination command, STM32 ends the game.
 
