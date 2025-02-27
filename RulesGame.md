@@ -1,16 +1,15 @@
 # Game Rules “GameSnake”
-1.1. Game Field – The game field is a grid (e.g., NxN).
-1.2. Game Start – The game starts from a specific starting position, presumably         in the center, and movement is controlled using the WASD keys.
-1.3. Snake Growth – The snake grows in size each time it eats an apple.
-1.4. Objective – The goal of the game is to eat apples that appear in random locations.
-1.5. Game Over Conditions – The game ends if the player loses control and crashes into a wall with the snake's head or if the snake collides with itself.
-Protocol organization (PC ↔ STM)
-2.1. PC – The PC acts as a controller, allowing the user to send movement commands to the STM32.
-2.2. STM32 – The STM32 handles the game logic, processes movement, and sends the game state to the PC.
-2.3. Communication – UART is used for communication.
-Error Handling
-
-**3. Error Processing **
+1.1. __Game Field__ – The game field is a grid (e.g., NxN).
+1.2. __Game Start__ – The game starts from a specific starting position, presumably         in the center, and movement is controlled using the WASD keys.
+1.3. __Snake Growth__ – The snake grows in size each time it eats an apple.
+1.4. __Objective__ – The goal of the game is to eat apples that appear in random locations.
+1.5. __Game Over Conditions__ – The game ends if the player loses control and crashes into a wall with the snake's head or if the snake collides with itself.
+# Protocol organization (PC ↔ STM)
+2.1. __PC__ – The PC acts as a controller, allowing the user to send movement commands to the STM32.
+2.2. __STM32__ – The STM32 handles the game logic, processes movement, and sends the game state to the PC.
+2.3. __Communication__ – UART is used for communication.
+# Error Handling
+3. Error Processing
 Error handling will be performed using CRC16. (0x01 – Unknown command)
 4.Game Process Recovery
 4.1. Sending an Error Code with Recovery
