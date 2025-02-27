@@ -12,21 +12,21 @@
 ### 3.Error Processing
 Error handling will be performed using CRC16. (0x01 – Unknown command)
 ### 4.Game Process Recovery
-### 4.1. Sending an Error Code with Recovery
+4.1. Sending an Error Code with Recovery
 In this case, we can implement an error code with recovery when the STM32 restarts or disconnects. Error code 0x03 – Emergency restart
 ### 5.Invalid Checksum Handling
 Handling with CRC16
 All checksum verification will be done using CRC16.
 ### 6. Loss of Coordinate Packet
-### 6.1. Request for Resending
+ 6.1. Request for Resending
 Send a request for retransmission (0x20).
-### 6.2. STM32 must resend the last known position.
+ 6.2. STM32 must resend the last known position.
 ### 7. Behavior When the Game Stops
 The PC must send the "Stop Game" command. STM32 stops the snake's movement and pauses the game.
 0x03 – Game Over
 The game stops unexpectedly (power failure, software error). An error code is sent using CRC16.
 Detect the absence of a response and resend the Start Game (0x01) command. An error code is sent using CRC16.
-### 7.1. Handling Delays
+ 7.1. Handling Delays
 If commands are received with a very small interval, we implement a mechanism where, if no information is received for 1 second, the game will pause.
 ### 8. STM32 Behavior in Case of an Erroneous Game Stop
 If STM32 unexpectedly receives a game termination command (specific commands to be defined later):
